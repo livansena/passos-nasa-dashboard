@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  nasapanel:
+    build: .
+    ports:
+      - "3004:3000"
+    volumes:
+      - .:/usr/src/app
+    restart: always

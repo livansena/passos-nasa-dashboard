@@ -46,7 +46,7 @@ function renderContent(data) {
 }
 
 async function getAPOD(date) {
-    const url = `/apod?date=${date}`;
+    const url = `/projetos/nasapanel/apod?date=${date}`;
     contentContainer.innerHTML = '<div class="loading">Loading...</div>';
 
     try {

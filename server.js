@@ -2,21 +2,21 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fetch = require('node-fetch');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const API_KEY = process.env.NASA_API_KEY;
 
+const BASE_URL = '/projetos/nasapanel';
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(BASE_URL, express.static(path.join(__dirname, 'public')));
 
-
-app.get('/', (req, res) => {
+app.get(BASE_URL, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-
-app.get('/apod', async (req, res) => {
+app.get(BASE_URL + '/apod', async (req, res) => {
     const date = req.query.date || '';
     const url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`;
 
