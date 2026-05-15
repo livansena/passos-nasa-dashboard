@@ -31,7 +31,9 @@ This project was created to practice API consumption, JavaScript, backend struct
 
 ## 📸 Preview
 
-(Add screenshot here later)
+## 📸 Preview
+
+![NASA Panel Preview](Nasa.png)
 
 ---
 
