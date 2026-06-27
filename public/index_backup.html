@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA APOD Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Astronomy Picture of the Day</h1>
+        <p>Explore the universe with NASA's daily images and videos.</p>
+    </header>
+
+    <main>
+    <section class="controls">
+        <label for="date-picker">Select a date:</label>
+        <input type="date" id="date-picker">
+    </section>
+
+    <section class="actions">
+        <button id="random-btn">Random Image</button>
+        <button id="fullscreen-btn" disabled>Full Screen</button>
+        </section>
+    <section id="content-container">
+        <div class="loading">Loading...</div>
+    </section>
+</main>
+
+    <footer>
+    <p>© 2025 Livan Passos. All rights reserved.</p>
+    <p>Contact e-mail</e-mail>: livansena@gmail.com</p>
+    <div class="footer-buttons">
+        <a href="https://www.linkedin.com/in/livanpassos/" target="_blank" class="linkedin-btn">Linkedin</a>
+        <a href="https://github.com/livansena/NASA-Panel" target="_blank" class="github-btn">Github</a>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
