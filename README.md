@@ -2,7 +2,7 @@
 
 > A modular backend-driven dashboard that integrates multiple NASA Open APIs into a single modern web application.
 
-![Dashboard](Nasa.png)
+![Dashboard](public/images/dashboard-preview.png)
 
 ---
 
@@ -150,7 +150,7 @@ These are common backend concepts used in production environments integrating se
 
 ## Dashboard
 
-![Dashboard](Nasa.png)
+![Dashboard](public/images/dashboard-preview.png)
 
 ---
 
