@@ -1,150 +1,186 @@
-# 🚀 NASA Panel
+# 🚀 Passos NASA Dashboard
 
-## Astronomy Dashboard Powered by NASA APIs
+> A modular backend-driven dashboard that integrates multiple NASA Open APIs into a single modern web application.
 
-NASA Panel is a web application that consumes NASA's Astronomy Picture of the Day (APOD) API and presents astronomical content through a modern and responsive interface.
-
-The project was developed to strengthen skills in API integration, JSON processing, backend development with Node.js, and containerized deployment using Docker.
-
-This application demonstrates how modern systems interact with external services, process API responses, and transform raw data into meaningful user experiences.
+![Dashboard](Nasa.png)
 
 ---
 
-## ✨ Features
+# 🌌 About
 
-* NASA APOD API Integration
-* Dynamic Image Rendering
-* Dynamic Description Rendering
-* Date-Based Search
-* Random Astronomy Image
-* Full Screen Image View
-* Responsive Layout
-* Backend with Node.js
-* Docker Support
-* Environment Variable Configuration
+Passos NASA Dashboard is a modular web application designed to consume and organize data from multiple NASA Open APIs through a clean and responsive interface.
+
+Rather than being a single API integration project, the application was designed as an expandable platform where new NASA services can be added as independent modules over time.
+
+The current version focuses on the Astronomy Picture of the Day (APOD) API while providing the architectural foundation for future integrations such as Mars Rover photos, EPIC Earth imagery, Near Earth Objects, and additional space data services.
+
+The primary goal of this project is to demonstrate real-world backend development practices including API integration, asynchronous communication, modular architecture, environment management, and scalable application design.
 
 ---
 
-## 🛠 Technologies Used
+# ✨ Current Features
 
-### Frontend
+## APOD Module
 
-* HTML5
-* CSS3
-* JavaScript
-
-### Backend
-
-* Node.js
-* Express.js
-
-### Infrastructure
-
-* Docker
-* Docker Compose
-
-### External Services
-
-* NASA Open APIs
-
-### Development Tools
-
-* Git
-* GitHub
+- Astronomy Picture of the Day integration
+- Date search
+- Random image generator
+- Full screen image viewer
+- Image metadata
+- Copyright information
+- HD image detection
+- Responsive interface
 
 ---
 
-## 🎯 Skills Demonstrated
+# 🚀 Planned Modules
 
-This project demonstrates practical experience with:
+The dashboard was intentionally built to grow.
 
-* API Integration
-* JSON Processing
-* External Service Consumption
-* Backend Development
-* Asynchronous Requests
-* Environment Variables
-* Docker Containerization
-* Frontend Rendering
-* Error Handling
-* Data Visualization
+Upcoming modules include:
 
-These are common skills used when integrating third-party services in production environments.
+| Module | Status |
+|---------|---------|
+| 🌍 EPIC Earth Images | Coming Soon |
+| 🚀 Mars Rover Photos | Next Release |
+| ☄️ Near Earth Objects | Planned |
+| 🌌 Additional NASA APIs | Future Ideas |
 
-Examples:
-
-* Stripe
-* PayPal
-* Twilio
-* SendGrid
-* AWS Services
-* OpenAI APIs
+This modular approach allows the application to evolve without major architectural changes.
 
 ---
 
-## 🏗 Application Architecture
+# 🏗 Project Architecture
 
-Application Flow:
+```
+                User
 
-User Request
+                  │
 
-↓
+                  ▼
 
-Node.js Backend
+          Express Server
 
-↓
+                  │
 
-NASA APOD API
+        Business Logic Layer
 
-↓
+                  │
 
-JSON Response
+      NASA API Service Layer
 
-↓
+                  │
 
-Data Processing
+        External NASA APIs
 
-↓
+                  │
 
-Frontend Rendering
+          JSON Processing
 
-↓
+                  │
 
-User Interface
+      Frontend Rendering
 
-This architecture demonstrates how backend systems communicate with external APIs and deliver processed information to end users.
+                  │
 
----
+          Responsive UI
+```
 
-## 📸 Preview
-
-### Dashboard
-
-![NASA Panel](Nasa.png)
+The application separates responsibilities between backend services and frontend rendering, making future integrations straightforward and maintainable.
 
 ---
 
-## ⚙️ Running Locally
+# 🛠 Tech Stack
 
-Clone the repository:
+## Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Backend
+
+- Node.js
+- Express.js
+
+## APIs
+
+- NASA APOD API
+- NASA Open APIs
+
+## Infrastructure
+
+- Docker
+- Docker Compose
+
+## Development
+
+- Git
+- GitHub
+
+---
+
+# 🎯 Backend Concepts Demonstrated
+
+This project showcases practical experience with:
+
+- REST API Consumption
+- External Service Integration
+- JSON Parsing
+- Asynchronous Programming
+- Backend Routing
+- Error Handling
+- Environment Variables
+- Modular Architecture
+- Dockerized Applications
+- Responsive Frontend Rendering
+
+These are common backend concepts used in production environments integrating services such as:
+
+- Stripe
+- PayPal
+- Twilio
+- SendGrid
+- AWS Services
+- OpenAI APIs
+
+---
+
+# 📸 Application Preview
+
+## Dashboard
+
+![Dashboard](Nasa.png)
+
+---
+
+# ⚙ Running Locally
+
+Clone the repository
 
 ```bash
 git clone https://github.com/livansena/NASA-Panel.git
 ```
 
-Navigate to the project folder:
+Enter the project
 
 ```bash
 cd NASA-Panel
 ```
 
-Install dependencies:
+Install dependencies
 
 ```bash
 npm install
 ```
 
-Start the application:
+Create your environment file
+
+```env
+NASA_API_KEY=your_api_key_here
+```
+
+Start the server
 
 ```bash
 npm start
@@ -152,83 +188,90 @@ npm start
 
 ---
 
-## 🔐 Environment Variables
+# 🔮 Roadmap
 
-Create a `.env` file in the root directory:
+## Version 1 ✅
 
-```env
-NASA_API_KEY=your_api_key_here
-```
-
-You can obtain a free API key directly from NASA Open APIs.
-
----
-
-## 🔮 Future Improvements
-
-Planned enhancements include:
-
-* Mars Rover Photos Integration
-* Near Earth Objects Dashboard
-* Space Weather Information
-* Multiple NASA APIs
-* Advanced Filtering
-* Improved Mobile Experience
-* Enhanced Error Handling
+- APOD integration
+- Date search
+- Random image
+- Metadata panel
+- Responsive design
 
 ---
 
-## 🌍 Real-World Relevance
+## Version 2
 
-Modern software systems frequently depend on external integrations.
-
-NASA Panel was created to demonstrate the ability to:
-
-* Connect to external services
-* Process remote data
-* Handle API responses
-* Manage environment variables
-* Deploy applications using containers
-* Transform raw information into usable interfaces
+- Mars Rover API
+- EPIC Earth API
+- Better animations
+- Improved caching
 
 ---
 
-## 👨‍💻 Author
+## Version 3
 
-### Livan Passos
+- Near Earth Objects
+- Multiple NASA APIs
+- Search history
+- Favorites
+- Dashboard improvements
 
-Backend Developer focused on:
+---
 
-* Ruby on Rails
-* PostgreSQL
-* REST APIs
-* Backend Architecture
-* Software Engineering
+# 🌍 Why This Project Matters
 
-### Connect with Me
+Modern backend applications rarely operate in isolation.
 
-LinkedIn:
+Instead, they communicate continuously with external services, process remote data, apply business logic, and deliver meaningful information to users.
 
-https://www.linkedin.com/in/livanpassos/
+This project demonstrates the same architectural concepts used in production systems that integrate APIs such as payment gateways, cloud services, AI platforms, messaging providers, and third-party business systems.
 
-Portfolio:
+Rather than focusing solely on frontend presentation, the project emphasizes backend communication, modularity, maintainability, and scalable application design.
+
+---
+
+# 👨‍💻 About Me
+
+**Livan Passos**
+
+Backend Developer
+
+Focused on building reliable backend systems using:
+
+- Ruby on Rails
+- PostgreSQL
+- Node.js
+- REST APIs
+- Backend Architecture
+- Software Engineering
+
+### Portfolio
 
 https://livanpassos.com
 
+### LinkedIn
+
+https://linkedin.com/in/livanpassos
+
 ---
 
-## 🎯 Professional Philosophy
+# 💭 Professional Philosophy
 
-After more than 15 years working in industrial maintenance, quality assurance, operations, logistics, and critical environments, I transitioned into software development with a clear objective:
+After more than 15 years working in industrial maintenance, quality assurance, logistics, and critical production environments, I transitioned into software engineering.
 
-Building reliable systems that solve real business problems.
+The same principles that once ensured operational reliability now drive the way I build software:
 
-The same principles that drive operational excellence — discipline, continuous improvement, attention to detail, and problem-solving — are now applied to software engineering.
+- Structured thinking
+- Problem solving
+- Continuous improvement
+- System reliability
+- Attention to detail
 
 **The tools changed. The mindset did not.**
 
 ---
 
-## 📄 License
+# 📄 License
 
-This project was developed for educational and portfolio purposes.
+This project was created for educational purposes and as part of my professional portfolio.
