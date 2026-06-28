@@ -1,141 +1,71 @@
-# 🚀 NASA Panel
+# 🚀 Passos NASA Dashboard
 
-## Astronomy Dashboard Powered by NASA APIs
+A modern and responsive NASA dashboard built with **HTML5**, **CSS3**, **JavaScript**, **Node.js**, and **Express**, consuming the official **NASA Open APIs** to explore real-time space data.
 
-NASA Panel is a web application that consumes NASA's Astronomy Picture of the Day (APOD) API and presents astronomical content through a modern and responsive interface.
+<p align="center">
+  <img src="public/images/screenshot-home.png" alt="Passos NASA Dashboard" width="100%">
+</p>
 
-The project was developed to strengthen skills in API integration, JSON processing, backend development with Node.js, and containerized deployment using Docker.
+---
 
-This application demonstrates how modern systems interact with external services, process API responses, and transform raw data into meaningful user experiences.
+## 🌌 Overview
+
+Passos NASA Dashboard is a personal portfolio project designed to demonstrate front-end development skills, REST API integration, asynchronous JavaScript, and responsive UI design.
+
+The application connects to NASA's Astronomy Picture of the Day (APOD) API, allowing users to explore space images, view metadata, and navigate through future planned modules.
+
+Although simple in appearance, the project focuses on clean architecture, user experience, and production-quality code organization.
 
 ---
 
 ## ✨ Features
 
-* NASA APOD API Integration
-* Dynamic Image Rendering
-* Dynamic Description Rendering
-* Date-Based Search
-* Random Astronomy Image
-* Full Screen Image View
-* Responsive Layout
-* Backend with Node.js
-* Docker Support
-* Environment Variable Configuration
+- 🌍 Astronomy Picture of the Day (APOD)
+- 📅 Search images by date
+- 🎲 Random space image
+- 🖼 Full Screen mode
+- 📄 APOD metadata panel
+- ⚡ Loading states
+- 🚨 Error handling when NASA API is unavailable
+- 📱 Responsive interface
+- 🎨 Modern dark UI
 
 ---
 
-## 🛠 Technologies Used
+## 🛠 Technologies
 
-### Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-
-### Backend
-
-* Node.js
-* Express.js
-
-### Infrastructure
-
-* Docker
-* Docker Compose
-
-### External Services
-
-* NASA Open APIs
-
-### Development Tools
-
-* Git
-* GitHub
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Node.js
+- Express.js
+- REST APIs
+- NASA Open APIs
 
 ---
 
-## 🎯 Skills Demonstrated
+## 📡 API Used
 
-This project demonstrates practical experience with:
+NASA Open APIs
 
-* API Integration
-* JSON Processing
-* External Service Consumption
-* Backend Development
-* Asynchronous Requests
-* Environment Variables
-* Docker Containerization
-* Frontend Rendering
-* Error Handling
-* Data Visualization
+https://api.nasa.gov/
 
-These are common skills used when integrating third-party services in production environments.
+Main endpoint used:
 
-Examples:
+https://api.nasa.gov/planetary/apod
 
-* Stripe
-* PayPal
-* Twilio
-* SendGrid
-* AWS Services
-* OpenAI APIs
-
----
-
-## 🏗 Application Architecture
-
-Application Flow:
-
-User Request
-
-↓
-
-Node.js Backend
-
-↓
-
-NASA APOD API
-
-↓
-
-JSON Response
-
-↓
-
-Data Processing
-
-↓
-
-Frontend Rendering
-
-↓
-
-User Interface
-
-This architecture demonstrates how backend systems communicate with external APIs and deliver processed information to end users.
-
----
-
-## 📸 Preview
-
-### Dashboard
-
-![NASA Panel](Nasa.png)
-
----
-
-## ⚙️ Running Locally
+## 🚀 Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/livansena/NASA-Panel.git
+git clone https://github.com/livansena/passos-nasa-dashboard.git
 ```
 
-Navigate to the project folder:
+Enter the project folder:
 
 ```bash
-cd NASA-Panel
+cd passos-nasa-dashboard
 ```
 
 Install dependencies:
@@ -144,91 +74,212 @@ Install dependencies:
 npm install
 ```
 
-Start the application:
+Start the local server:
 
 ```bash
 npm start
 ```
 
----
+Open your browser:
 
-## 🔐 Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-NASA_API_KEY=your_api_key_here
+```
+http://localhost:3000
 ```
 
-You can obtain a free API key directly from NASA Open APIs.
+---
+
+## 📁 Project Structure
+
+```
+passos-nasa-dashboard/
+│
+├── public/
+│   ├── css/
+│   │     style.css
+│   │
+│   ├── js/
+│   │     script.js
+│   │
+│   ├── images/
+│   │
+│   └── index.html
+│
+├── server.js
+├── package.json
+├── .gitignore
+└── README.md
+```
 
 ---
 
-## 🔮 Future Improvements
+## 📸 Screenshots
 
-Planned enhancements include:
+### Home
 
-* Mars Rover Photos Integration
-* Near Earth Objects Dashboard
-* Space Weather Information
-* Multiple NASA APIs
-* Advanced Filtering
-* Improved Mobile Experience
-* Enhanced Error Handling
+> Modern dashboard interface
+
+*(Insert project screenshot here)*
 
 ---
 
-## 🌍 Real-World Relevance
+### APOD Viewer
 
-Modern software systems frequently depend on external integrations.
+> Astronomy Picture of the Day with detailed information
 
-NASA Panel was created to demonstrate the ability to:
-
-* Connect to external services
-* Process remote data
-* Handle API responses
-* Manage environment variables
-* Deploy applications using containers
-* Transform raw information into usable interfaces
+*(Insert APOD screenshot here)*
 
 ---
 
-## 👨‍💻 Author
+### Responsive Layout
 
-### Livan Passos
+> Optimized experience for desktop and mobile devices
 
-Backend Developer focused on:
-
-* Ruby on Rails
-* PostgreSQL
-* REST APIs
-* Backend Architecture
-* Software Engineering
-
-### Connect with Me
-
-LinkedIn:
-
-https://www.linkedin.com/in/livanpassos/
-
-Portfolio:
-
-https://livanpassos.com
+*(Insert responsive screenshot here)*
 
 ---
 
-## 🎯 Professional Philosophy
+## 🚧 Planned Modules
 
-After more than 15 years working in industrial maintenance, quality assurance, operations, logistics, and critical environments, I transitioned into software development with a clear objective:
+The dashboard was designed to be expandable.
 
-Building reliable systems that solve real business problems.
+Future integrations include:
 
-The same principles that drive operational excellence — discipline, continuous improvement, attention to detail, and problem-solving — are now applied to software engineering.
+- 🌍 EPIC Earth Imagery
+- 🚀 Mars Rover Photos
+- ☄️ Near Earth Objects (NeoWs)
+- 🛰️ NASA Image Library
+- 🌎 Earth Observatory APIs
+- 🌌 More NASA Open APIs
 
-**The tools changed. The mindset did not.**
+These modules are intentionally displayed in the interface as part of the project's roadmap.
 
 ---
 
-## 📄 License
+## ⚠ Known Limitation
 
-This project was developed for educational and portfolio purposes.
+The application depends entirely on NASA's public API.
+
+Occasionally the service may become temporarily unavailable or return server errors. The application handles these situations gracefully by displaying informative messages to the user instead of crashing.
+
+## 🚀 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/livansena/passos-nasa-dashboard.git
+```
+
+Enter the project folder:
+
+```bash
+cd passos-nasa-dashboard
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the local server:
+
+```bash
+npm start
+```
+
+Open your browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📁 Project Structure
+
+```
+passos-nasa-dashboard/
+│
+├── public/
+│   ├── css/
+│   │     style.css
+│   │
+│   ├── js/
+│   │     script.js
+│   │
+│   ├── images/
+│   │
+│   └── index.html
+│
+├── server.js
+├── package.json
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 📸 Screenshots
+
+### Home
+
+> Modern dashboard interface
+
+*(Insert project screenshot here)*
+
+---
+
+### APOD Viewer
+
+> Astronomy Picture of the Day with detailed information
+
+*(Insert APOD screenshot here)*
+
+---
+
+### Responsive Layout
+
+> Optimized experience for desktop and mobile devices
+
+*(Insert responsive screenshot here)*
+
+---
+
+## 🚧 Planned Modules
+
+The dashboard was designed to be expandable.
+
+Future integrations include:
+
+- 🌍 EPIC Earth Imagery
+- 🚀 Mars Rover Photos
+- ☄️ Near Earth Objects (NeoWs)
+- 🛰️ NASA Image Library
+- 🌎 Earth Observatory APIs
+- 🌌 More NASA Open APIs
+
+These modules are intentionally displayed in the interface as part of the project's roadmap.
+
+---
+
+## ⚠ Known Limitation
+
+The application depends entirely on NASA's public API.
+
+Occasionally the service may become temporarily unavailable or return server errors. The application handles these situations gracefully by displaying informative messages to the user instead of crashing.
+
+# 👨‍💻 Why I Built This Project
+
+This project was created as part of my software engineering portfolio during my transition into Backend Development.
+
+My goal was not only to consume a REST API, but also to build a clean, responsive, and professional-looking application that demonstrates practical front-end development, asynchronous JavaScript, and API integration skills.
+
+The dashboard also serves as the foundation for future NASA API modules, making it a scalable project rather than a one-time demo.
+
+> **The tools changed. The mindset did not.**
+
+My background in industrial maintenance taught me to solve problems systematically, build reliable solutions, and continuously improve complex systems. Today, I apply the same engineering mindset to software development, creating applications that are clean, scalable, and designed with real-world challenges in mind.
+
+Made with ❤️ by Livan Passos
+
+The tools changed. The mindset did not.
