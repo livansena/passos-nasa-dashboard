@@ -1,42 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NASA APOD Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Passos NASA Dashboard
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
 </head>
+
 <body>
 
-    <header>
-        <h1>Astronomy Picture of the Day</h1>
-        <p>Explore the universe with NASA's daily images and videos.</p>
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <header class="navbar">
+
+        <!-- Brand -->
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                <div class="logo-circle"></div>
+            </div>
+
+            <div class="brand-info">
+
+                <h1>
+                    Passos NASA Dashboard
+                </h1>
+
+                <p>
+                    Explore real-time space data powered by NASA Open APIs.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Technologies -->
+
+        <div class="tech-stack">
+
+            <span class="tech-item">
+
+                <i class="fa-brands fa-html5 html"></i>
+
+                HTML5
+
+            </span>
+
+            <span class="tech-item">
+
+                <i class="fa-brands fa-css3-alt css"></i>
+
+                CSS3
+
+            </span>
+
+            <span class="tech-item">
+
+                <i class="fa-brands fa-js javascript"></i>
+
+                JavaScript
+
+            </span>
+
+            <span class="tech-item">
+
+                <i class="fa-brands fa-node-js node"></i>
+
+                Node.js
+
+            </span>
+
+            <span class="tech-item">
+
+                <i class="fa-solid fa-server express"></i>
+
+                Express
+
+            </span>
+
+            <span class="tech-item">
+
+                <i class="fa-solid fa-link api"></i>
+
+                REST API
+
+            </span>
+
+            <span class="tech-item">
+
+                <i class="fa-solid fa-rocket nasa"></i>
+
+                NASA API
+
+            </span>
+
+        </div>
+
     </header>
 
-    <main>
-    <section class="controls">
-        <label for="date-picker">Select a date:</label>
-        <input type="date" id="date-picker">
+    <!-- ========================= -->
+    <!-- CONTROLS -->
+    <!-- ========================= -->
+
+        <section class="controls">
+
+        <div class="control-group">
+
+            <label for="date-picker">
+                Select a Date
+            </label>
+
+            <div class="date-input-wrapper">
+
+                <input
+                    type="date"
+                    id="date-picker"
+                >
+
+            </div>
+
+        </div>
+
+        <div class="actions">
+
+            <button id="random-btn">
+
+                <i class="fa-solid fa-dice"></i>
+
+                Random Image
+
+            </button>
+
+            <button
+                id="fullscreen-btn"
+                disabled
+            >
+
+                <i class="fa-solid fa-expand"></i>
+
+                Full Screen
+
+            </button>
+
+        </div>
+
     </section>
 
-    <section class="actions">
-        <button id="random-btn">Random Image</button>
-        <button id="fullscreen-btn" disabled>Full Screen</button>
+    <!-- ========================= -->
+    <!-- DASHBOARD -->
+    <!-- ========================= -->
+
+    <main class="dashboard">
+
+        <!-- APOD -->
+
+        <section class="apod-section">
+
+            <div id="content-container">
+
+                <div class="loading">
+
+                    Loading...
+
+                </div>
+
+            </div>
+
         </section>
-    <section id="content-container">
-        <div class="loading">Loading...</div>
-    </section>
-</main>
 
-    <footer>
-    <p>© 2025 Livan Passos. All rights reserved.</p>
-    <p>Contact e-mail</e-mail>: livansena@gmail.com</p>
-    <div class="footer-buttons">
-        <a href="https://www.linkedin.com/in/livanpassos/" target="_blank" class="linkedin-btn">Linkedin</a>
-        <a href="https://github.com/livansena/NASA-Panel" target="_blank" class="github-btn">Github</a>
+        <!-- INFORMATION CARD -->
+
+        <aside class="info-card">
+
+            <h3>
+
+                APOD Information
+
+            </h3>
+
+            <div class="info-item">
+
+                <span>Date</span>
+
+                <p id="info-date">
+
+                    --
+
+                </p>
+
+            </div>
+
+            <div class="info-item">
+
+                <span>Media Type</span>
+
+                <p id="info-media">
+
+                    --
+
+                </p>
+
+            </div>
+
+            <div class="info-item">
+
+                <span>Copyright</span>
+
+                <p id="info-copyright">
+
+                    --
+
+                </p>
+
+            </div>
+
+            <div class="info-item">
+
+                <span>HD Image</span>
+
+                <div id="info-hd">
+
+                    Available after loading
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- MODULES -->
+    <!-- ========================= -->
+
+    <section class="widgets">
+
+        <article class="widget-card">
+
+    <div class="widget-icon">
+        <i class="fa-solid fa-earth-americas"></i>
     </div>
+
+    <span class="widget-badge coming">
+        
+    </span>
+
+    <h3>Earth</h3>
+
+    <p>
+        EPIC Earth imagery integration.
+    </p>
+
+    <div class="widget-status">
+
+        <span>Status</span>
+
+       <strong>Coming Soon</strong>
+
+    </div>
+
+</article>
+
+    <article class="widget-card">
+
+    <div class="widget-icon">
+        <i class="fa-solid fa-rocket"></i>
+    </div>
+
+    <span class="widget-badge release">
+        
+    </span>
+
+    <h3>Mars Rover</h3>
+
+    <p>
+        Explore photos captured directly from Mars.
+    </p>
+
+    <div class="widget-status">
+
+        <span>Status</span>
+
+        <strong>Next Release</strong>
+
+    </div>
+
+</article>
+
+    <article class="widget-card">
+
+    <div class="widget-icon">
+        <i class="fa-solid fa-meteor"></i>
+    </div>
+
+    <span class="widget-badge planned">
+        
+    </span>
+
+    <h3>Near Earth Objects</h3>
+
+    <p>
+        Track asteroids and near-earth objects.
+    </p>
+
+    <div class="widget-status">
+
+        <span>Status</span>
+
+        <strong>Planned</strong>
+
+    </div>
+
+</article>
+
+    <article class="widget-card">
+
+    <div class="widget-icon">
+        <i class="fa-solid fa-satellite"></i>
+    </div>
+
+    <span class="widget-badge future">
+        
+    </span>
+
+    <h3>Future Module</h3>
+
+    <p>
+        New NASA APIs will be added in future updates.
+    </p>
+
+    <div class="widget-status">
+
+        <span>Status</span>
+
+        <strong>Future Ideas</strong>
+
+    </div>
+
+    </article>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <h3>
+                Passos NASA Dashboard
+            </h3>
+
+            <p>
+                Space Data Explorer powered by NASA Open APIs.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a
+                href="https://github.com/livansena/NASA-Panel"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="fa-brands fa-github"></i>
+
+                &nbsp;GitHub
+
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/livanpassos/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="fa-brands fa-linkedin"></i>
+
+                &nbsp;LinkedIn
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <p class="copyright">
+
+        © 2026 Livan Passos. All rights reserved.
+
+    </p>
+
 </footer>
 
-    <script src="script.js"></script>
+<script src="js/script.js"></script>
+
 </body>
+
 </html>
